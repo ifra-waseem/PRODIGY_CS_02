@@ -1,0 +1,72 @@
+# Image Encryption Tool
+
+This is a simple image encryption and decryption tool using pixel manipulation. The script uses the XOR operation to encrypt and decrypt images.
+
+## Prerequisites
+
+- Python 3.x
+- Pillow (Python Imaging Library)
+- NumPy
+
+## Installation
+
+1. **Clone the Repository**:
+
+   ```sh
+   git clone https://github.com/your-username/image-encryption-tool.git
+   cd image-encryption-tool
+Install Dependencies:
+
+Ensure you have Python 3 installed. Then, install the required libraries:
+
+sh
+Copy code
+sudo apt update
+sudo apt install python3-pip
+pip3 install pillow numpy
+Usage
+To use the script, open your terminal and navigate to the directory where the script is saved.
+
+Encrypt an Image
+sh
+Copy code
+python3 image_encryption.py encrypt <input_image> <output_image> <key>
+<input_image>: Path to the input image you want to encrypt.
+<output_image>: Path where the encrypted image will be saved.
+<key>: Encryption key (an integer).
+Example:
+
+sh
+Copy code
+python3 image_encryption.py encrypt my_image.png encrypted_image.png 123
+Decrypt an Image
+sh
+Copy code
+python3 image_encryption.py decrypt <input_image> <output_image> <key>
+<input_image>: Path to the encrypted image.
+<output_image>: Path where the decrypted image will be saved.
+<key>: Decryption key (must be the same as the encryption key).
+Example:
+
+sh
+Copy code
+python3 image_encryption.py decrypt encrypted_image.png decrypted_image.png 123
+Example
+Encrypting an Image:
+
+sh
+Copy code
+python3 image_encryption.py encrypt my_image.png encrypted_image.png 123
+This command encrypts my_image.png using the key 123 and saves the encrypted image as encrypted_image.png.
+
+Decrypting an Image:
+
+sh
+Copy code
+python3 image_encryption.py decrypt encrypted_image.png decrypted_image.png 123
+This command decrypts encrypted_image.png using the same key 123 and saves the decrypted image as decrypted_image.png.
+
+Notes
+The encryption and decryption keys must be the same for the process to work correctly.
+The script performs XOR operation on the pixel values, which is a simple yet effective method for image encryption and decryption.
+Ensure the input image is in a format supported by Pillow (e.g., PNG, JPEG).
